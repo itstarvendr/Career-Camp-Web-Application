@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students</title>
+</head>
+<body>
+  <h1>Students</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>College</th>
+        <th>Status</th>
+        <th>DSA Score</th>
+        <th>WebD Score</th>
+        <th>React Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const student of students) { %>
+        <tr>
+          <td><%= student.id %></td>
+          <td><%= student.name %></td>
+          <td><%= student.college %></td>
+          <td><%= student.status %></td>
+          <td><%= student.dsa_score %></td>
+          <td><%= student.webd_score %></td>
+          <td><%= student.react_score %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>

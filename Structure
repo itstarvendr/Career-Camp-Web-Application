@@ -1,0 +1,13 @@
+project_root
+├── app.js
+├── index.html
+├── models
+│   ├── student.js
+│   └── interview.js
+├── controllers
+│   ├── students.js
+│   └── interviews.js
+└── views
+    ├── students.html
+    ├── interviews.html
+    └── download.html

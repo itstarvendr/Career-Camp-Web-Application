@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Data</title>
+</head>
+<body>
+  <h1>Download Data</h1>
+  <p>Click the button below to download the data in CSV format.</p>
+  <button onclick="downloadCSV()">Download</button>
+
+  <script>
+  function downloadCSV() {
+    var data = [
+      'Student ID,Student Name,Student College,Student Status,DSA Final Score,WebD Final Score,React Final Score',
+      ...students.map(student => student.toCSV()),
+    ];
+
+    var csvFile = new Blob([data], {type: 'text/csv'});
+    var downloadLink = document.createElement('a');
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+    downloadLink.download = 'data.csv';
+    downloadLink.click();
+  }
+
+  var students = [
+    {
+      id: 1,
+      name: 'John Doe',
+      college: 'Stanford University',
+      status: 'placed',
+      dsa_score: 100,
+      webd_score: 90,
+      react_score: 80,
+    },
+    {
+      id: 2,
+      name: 'Jane Doe',
+      college: 'University of California, Berkeley',
+      status: 'not_placed',
+      dsa_score: 90,
+      webd_score: 80,
+      react_score: 70,
+    },
+  ];
+  </script>
+</body>
+</html>
